@@ -5,10 +5,12 @@ import colorPalette from '../assets/Colors';
 const BalanceCard = ({ balance }) => {
     return (
         <View style={styles.card}>
-            <View style={{        position: 'absolute',
-        top: 20,
-        bottom: 20,
-        left: 20,}}>
+            <View style={{
+                position: 'absolute',
+                top: 20,
+                bottom: 20,
+                left: 20,
+            }}>
                 <Text style={styles.available}>AVAILABLE</Text>
                 <Text style={styles.balance}>{balance} €</Text>
             </View>
@@ -21,7 +23,7 @@ const BalanceCard = ({ balance }) => {
 
 const styles = StyleSheet.create({
     card: {
-        width: 345,
+        width: 395,
         height: 100,
         borderRadius: 8,
         backgroundColor: colorPalette.Blue,

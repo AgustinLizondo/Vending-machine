@@ -4,7 +4,7 @@ import colorPalette from '../assets/Colors'
 
 const TextTab = ({ content, selected }) => {
     return (
-        <TouchableOpacity style={selected ? styles.selectedCard : styles.card}>
+        <TouchableOpacity>
             <Text style={selected ? styles.selectedCard : styles.card}>{content}</Text>
         </TouchableOpacity>
     )
@@ -18,9 +18,8 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         fontWeight: '700',
         // fontFamily: 'Circular Std',
-        color: colorPalette.White,
-        height: 26,
-        width: 30
+        color: colorPalette.Gray,
+        marginRight: 15,
     },
     selectedCard: {
         fontSize: 15,
@@ -30,5 +29,6 @@ const styles = StyleSheet.create({
         color: colorPalette.Blue,
         borderBottomColor: colorPalette.Blue,
         borderBottomWidth: 2,
+        marginRight: 15,
     }
 })

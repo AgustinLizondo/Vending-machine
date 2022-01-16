@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         borderWidth: 1,
         borderColor: colorPalette.Gray,
+        marginHorizontal: 4,
     },
     selectedCard: {
         width: 64,
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: colorPalette.Gray,
         backgroundColor: colorPalette.Blue,
+        marginHorizontal: 4,
     }
 })
 

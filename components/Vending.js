@@ -58,7 +58,7 @@ export default Vending
 
 const styles = StyleSheet.create({
     card: {
-        width: 375,
+        width: 395,
         height: 64,
         backgroundColor: colorPalette.White,
         alignItems: 'center',

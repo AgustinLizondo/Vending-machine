@@ -51,7 +51,7 @@ const Header = ({ profileImage, name }) => {
 
 const styles = StyleSheet.create({
     card: {
-        width: 375,
+        width: '100%',
         height: 70,
         backgroundColor: colorPalette.White
     },

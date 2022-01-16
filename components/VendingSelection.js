@@ -83,6 +83,7 @@ export default VendingSelection
 const styles = StyleSheet.create({
     card: {
         backgroundColor: colorPalette.Blue,
+        top: 0,
         borderTopRightRadius: 24,
         borderTopLeftRadius: 24,
         width: '100%',
