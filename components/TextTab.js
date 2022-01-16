@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors'
 
-const TextTab = ({content, selected}) => {
+const TextTab = ({ content, selected }) => {
     return (
-        <View style={selected ? styles.selectedCard : styles.card}>
-            <Text style={selected ? styles.selectedCard : styles.card }>{content}</Text>
-        </View>
+        <TouchableOpacity style={selected ? styles.selectedCard : styles.card}>
+            <Text style={selected ? styles.selectedCard : styles.card}>{content}</Text>
+        </TouchableOpacity>
     )
 }
 

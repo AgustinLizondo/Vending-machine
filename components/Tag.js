@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors';
 
 const Tag = ({value, selected}) => {
     return (
-        <View style={selected ? styles.selectedCard : styles.card}>
+        <TouchableOpacity style={selected ? styles.selectedCard : styles.card}>
           <Text style={styles.content}>{value}</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 

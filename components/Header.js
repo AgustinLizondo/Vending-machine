@@ -1,44 +1,48 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors';
 
-const Header = ({profileImage, name}) => {
+const Header = ({ profileImage, name }) => {
 
     const [notifications, setNotifications] = useState(1)
     //Implementar useContext con las notificaciones para el badge
 
     return (
         <View style={styles.card}>
-            <View style={styles.profileImage}>
+            <TouchableOpacity style={styles.profileImage}>
                 <Image
                     source={profileImage}
-                    style={{width: 38, height: 38}}
+                    style={{ width: 38, height: 38 }}
                 />
-            </View>
+            </TouchableOpacity>
             <View style={styles.subCard}>
                 <Text style={styles.welcome}>WELCOME</Text>
                 <Text style={styles.profileName}>{name}</Text>
             </View>
-            {( notifications != 0 )
+            {(notifications != 0)
                 ? (
                     <View style={styles.badge}>
-                        <Image 
+                        <Image
                             source={require('../assets/badge.png')}
-                            style={{width: 16, height: 16}}
+                            style={{ width: 16, height: 16 }}
                         />
                     </View>
                 )
                 : null
             }
             <View style={styles.iconsCard}>
-                <Image 
-                    source={require('../assets/more-horizontal.png')}
-                    style={{width: 24, height: 24}}
-                />
-                <Image 
-                    source={require('../assets/active.png')}
-                    style={{width: 24, height: 24}}
-                />
+                <TouchableOpacity>
+                    <Image
+                        source={require('../assets/more-horizontal.png')}
+                        style={{ width: 24, height: 24 }}
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Image
+                        source={require('../assets/active.png')}
+                        style={{ width: 24, height: 24 }}
+                    />
+                </TouchableOpacity>
             </View>
         </View>
     )
