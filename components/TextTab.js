@@ -2,9 +2,9 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors'
 
-const TextTab = ({ content, selected }) => {
+const TextTab = ({ content, selected, onTap }) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onTap}>
             <Text style={selected ? styles.selectedCard : styles.card}>{content}</Text>
         </TouchableOpacity>
     )
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         lineHeight: 20,
         fontWeight: '700',
         // fontFamily: 'Circular Std',
-        color: colorPalette.Gray,
+        color: colorPalette.Shadow,
         marginRight: 15,
     },
     selectedCard: {

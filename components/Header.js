@@ -4,7 +4,7 @@ import colorPalette from '../assets/Colors';
 
 const Header = ({ profileImage, name }) => {
 
-    const [notifications, setNotifications] = useState(1)
+    const [notifications, setNotifications] = useState(4);
     //Implementar useContext con las notificaciones para el badge
 
     return (
