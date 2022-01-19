@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import TextTab from '../components/TextTab';
 import Vending from '../components/Vending';
 import Transaction from '../components/Transaction';
+import RechargeScreen from '../screens/RechargeScreen';
 
 const vendingOptions = [
     'Mix',
@@ -49,12 +50,13 @@ const transactionsMade = [
 const HomeScreen = () => {
 
     const [activeTag, setActiveTag] = useState('Vending');
+    const [isRecharging, setIsRecgharging] = useState(false);
 
     return (
         <View style={styles.container} >
             <Header profileImage={require('../assets/Rectangle-22.png')} name='Federica' />
             <View style={{ marginTop: 15 }}>
-                <BalanceCard balance={'220,00'} />
+                <BalanceCard balance={'220,00'} onTap={() => setIsRecgharging(!isRecharging)} />
             </View>
 
             <View style={{ flexDirection: 'row', marginTop: 25, width: 395 }}>
@@ -81,9 +83,15 @@ const HomeScreen = () => {
                 )
                 : (
                     <View style={{ marginTop: 15 }}>
-                        {transactionsMade.map((el, index) => (<Transaction type={el.type} nOrder={el.nOrder} code={el.code} date={el.date} transaction={el.transaction} price={el.price} />))}
+                        {transactionsMade.map((el, index) => (<Transaction type={el.type} nOrder={el.nOrder} code={el.code} date={el.date} transaction={el.transaction} price={el.price} key={index} />))}
                     </View>
                 )
+            }
+            {isRecharging
+                ? (
+                    <RechargeScreen />
+                )
+                : null
             }
         </View >
     )

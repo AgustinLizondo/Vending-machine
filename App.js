@@ -1,7 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
-import PaymentSection from './components/PaymentSection';
-import RechargeSelection from './components/RechargeSelection';
 import HomeScreen from './screens/HomeScreen';
 
 export default function App() {
@@ -9,8 +7,6 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       <HomeScreen />
-      <RechargeSelection />
-      <PaymentSection />
     </>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors';
 
-const BalanceCard = ({ balance }) => {
+const BalanceCard = ({ balance, onTap }) => {
     return (
         <View style={styles.card}>
             <View style={{
@@ -14,7 +14,7 @@ const BalanceCard = ({ balance }) => {
                 <Text style={styles.available}>AVAILABLE</Text>
                 <Text style={styles.balance}>{balance} €</Text>
             </View>
-            <TouchableOpacity style={styles.subCard}>
+            <TouchableOpacity style={styles.subCard} onPress={onTap}>
                 <Text style={styles.recharge}>Recharge</Text>
             </TouchableOpacity>
         </View>
