@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import colorPalette from '../assets/Colors'
 import PriceButton from './PriceButton'
 
 const RechargeSelection = () => {
+
+    const [selectedValue, setSelectedValue] = useState(10);
+
     return (
         <View style={styles.container}>
             <Image
@@ -17,9 +20,9 @@ const RechargeSelection = () => {
             <View style={styles.amountCard}>
                 <Text style={styles.selection}>Select import</Text>
                 <View style={styles.buttonCointainer}>
-                    <PriceButton price={5} selected={false} />
-                    <PriceButton price={10} selected={true} />
-                    <PriceButton price={20} selected={false} />
+                    <PriceButton price={5} selectedValue={selectedValue} onTap={() => setSelectedValue(5)} />
+                    <PriceButton price={10} selectedValue={selectedValue} onTap={() => setSelectedValue(10)} />
+                    <PriceButton price={20} selectedValue={selectedValue} onTap={() => setSelectedValue(20)} />
                 </View>
             </View>
         </View>

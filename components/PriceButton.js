@@ -2,10 +2,13 @@ import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 import colorPalette from '../assets/Colors';
 
-const PriceButton = ({price, selected}) => {
+const PriceButton = ({ price, selectedValue, onTap }) => {
     return (
-        <TouchableOpacity style={(selected) ? styles.selectedCard : styles.card}>
-            <Text style={(selected) ? styles.selectedContent : styles.content}>{price} €</Text>
+        <TouchableOpacity
+            style={(price === selectedValue) ? styles.selectedCard : styles.card}
+            onPress={onTap}
+        >
+            <Text style={(price === selectedValue) ? styles.selectedContent : styles.content}>{price} €</Text>
         </TouchableOpacity>
     )
 }

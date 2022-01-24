@@ -47,7 +47,7 @@ const transactionsMade = [
     },
 ]
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 
     const [activeTag, setActiveTag] = useState('Vending');
     const [isRecharging, setIsRecgharging] = useState(false);
@@ -78,7 +78,7 @@ const HomeScreen = () => {
             {activeTag === 'Vending'
                 ? (
                     <View style={{ marginTop: 15 }}>
-                        {vendingOptions.map((el, index) => (<Vending type={el} nOrder={'0' + (index + 1)} key={index} />))}
+                        {vendingOptions.map((el, index) => (<Vending type={el} nOrder={'0' + (index + 1)} key={index} onTap={() => navigation.navigate('Order')} />))}
                     </View>
                 )
                 : (
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFFFFF',
         alignItems: 'center',
-        marginTop: 24,
+        marginTop: 36,
     },
 });
 

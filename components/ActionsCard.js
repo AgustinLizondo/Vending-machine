@@ -9,7 +9,7 @@ const ActionsCard = () => {
     return (
         <View style={styles.card}>
             <Text style={styles.recent}>RECENT</Text>
-            <ScrollView horizontal style={styles.latestOrders}>
+            <ScrollView horizontal style={styles.latestOrders} showsHorizontalScrollIndicator={false}>
                 {latestOrders.map((el, index) => (<Tag key={index} value={el} />))}
             </ScrollView>
             <View style={{alignSelf: 'center', position: 'absolute', bottom: 15}}>

@@ -2,10 +2,10 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors';
 
-const Tag = ({value, selected}) => {
+const Tag = ({ value, selected }) => {
     return (
-        <TouchableOpacity style={selected ? styles.selectedCard : styles.card}>
-          <Text style={styles.content}>{value}</Text>
+        <TouchableOpacity style={selected ? styles.selectedCard : styles.card} >
+            <Text style={styles.content}>{value}</Text>
         </TouchableOpacity>
     )
 }

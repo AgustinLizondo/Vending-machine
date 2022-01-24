@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors';
 
-const Vending = ({ type, nOrder }) => {
+const Vending = ({ type, nOrder, onTap }) => {
     let typePhoto;
     switch (type) {
         case 'Beverage':
@@ -32,11 +32,14 @@ const Vending = ({ type, nOrder }) => {
     }
 
     return (
-        <TouchableOpacity style={styles.card}>
+        <TouchableOpacity
+            style={styles.card}
+            onPress={onTap}
+        >
             <View style={styles.badge}>
                 <Image
                     source={typePhoto.photo}
-                    style={{ width: 20, height: 20}}
+                    style={{ width: 20, height: 20 }}
                 />
             </View>
             <View style={styles.info}>
@@ -97,7 +100,7 @@ const styles = StyleSheet.create({
         marginRight: 4,
         color: colorPalette.Gray
     },
-    badge: { 
+    badge: {
         width: 32,
         height: 32,
         backgroundColor: colorPalette.Shadow,
