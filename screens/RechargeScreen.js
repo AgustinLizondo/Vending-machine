@@ -3,10 +3,10 @@ import { StyleSheet, View } from 'react-native';
 import RechargeSelection from '../components/RechargeSelection';
 import PaymentSection from '../components/PaymentSection';
 
-const RechargeScreen = () => {
+const RechargeScreen = ({onTap}) => {
     return (
         <View style={{ flex: 1, width: '100%' }}>
-            <RechargeSelection />
+            <RechargeSelection onTap={onTap} />
             <PaymentSection />
         </View>
     )

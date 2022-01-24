@@ -6,18 +6,18 @@ import ActionsCard from '../components/ActionsCard';
 const OrderScreen = ({ navigation }) => {
     return (
         <View style={styles.card}>
-            <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{position: 'absolute', zIndex: 1000, width: 128, height: 128}}>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')} style={{ position: 'absolute', zIndex: 1000, width: 128, height: 128 }}>
                 <Image
                     source={require('../assets/icons/chevron-left.png')}
-                    style={{ width: 32, height: 32, top: 16, left: 16}}
+                    style={{ width: 32, height: 32, top: 16, left: 16 }}
                 />
             </TouchableOpacity>
             <View style={styles.subCard}>
                 <Text style={styles.selection}>SELECTION</Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                    <TextInput style={styles.input} defaultValue={'E'} editable={false} keyboardType='numeric' />
-                    <TextInput style={styles.input} defaultValue={'4'} keyboardType='numeric' autoFocus />
-                    <TextInput style={styles.input} defaultValue={'1'} keyboardType='numeric' />
+                    <TextInput style={styles.input} defaultValue={'E'} editable={false} keyboardType='numeric' maxLength={1} />
+                    <TextInput style={styles.input} defaultValue={'4'} keyboardType='numeric' autoFocus maxLength={1} />
+                    <TextInput style={styles.input} defaultValue={'1'} keyboardType='numeric' maxLength={1} />
                 </View>
             </View>
             <ActionsCard />
@@ -30,7 +30,7 @@ export default OrderScreen;
 const styles = StyleSheet.create({
     card: {
         flex: 1,
-        // top: 42
+        top: 36
     },
     subCard: {
         width: '100%',

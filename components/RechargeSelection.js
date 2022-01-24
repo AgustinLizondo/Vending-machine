@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors'
 import PriceButton from './PriceButton'
 
-const RechargeSelection = () => {
+const RechargeSelection = ({ onTap }) => {
 
     const [selectedValue, setSelectedValue] = useState(10);
 
     return (
         <View style={styles.container}>
-            <Image
-                source={require('../assets/icons/Rectangle16.png')}
-                style={{ width: 48, height: 4, position: 'absolute', top: 12, }}
-            />
+            <TouchableOpacity
+                style={{ width: 128, height: 32, position: 'absolute', alignItems: 'center' }}
+                onPress={onTap}
+            >
+                <Image
+                    source={require('../assets/icons/Rectangle16.png')}
+                    style={{ width: 48, height: 4, position: 'absolute', top: 12 }}
+                />
+            </TouchableOpacity>
             <View style={styles.availableCard}>
                 <Text style={styles.available}>AVAILABLE</Text>
                 <Text style={styles.amount}>{'15,00'} €</Text>

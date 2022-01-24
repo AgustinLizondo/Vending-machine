@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
         lineHeight: 28,
         color: colorPalette.Blue,
-    }
+    },
 })
 
 export default PriceButton

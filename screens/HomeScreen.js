@@ -50,13 +50,13 @@ const transactionsMade = [
 const HomeScreen = ({ navigation }) => {
 
     const [activeTag, setActiveTag] = useState('Vending');
-    const [isRecharging, setIsRecgharging] = useState(false);
+    const [isRecharging, setIsRecharging] = useState(false);
 
     return (
         <View style={styles.container} >
             <Header profileImage={require('../assets/Rectangle-22.png')} name='Federica' />
             <View style={{ marginTop: 15 }}>
-                <BalanceCard balance={'220,00'} onTap={() => setIsRecgharging(!isRecharging)} />
+                <BalanceCard balance={'220,00'} onTap={() => setIsRecharging(true)} />
             </View>
 
             <View style={{ flexDirection: 'row', marginTop: 25, width: 395 }}>
@@ -89,7 +89,7 @@ const HomeScreen = ({ navigation }) => {
             }
             {isRecharging
                 ? (
-                    <RechargeScreen />
+                    <RechargeScreen onTap={() => setIsRecharging(false)} />
                 )
                 : null
             }
