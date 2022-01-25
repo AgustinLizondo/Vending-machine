@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
         fontSize: 17,
         lineHeight: 22,
         fontWeight: '400',
-        // fontFamily: 'Circular Std'
+        // fontFamily: 'Circular Std',
         color: colorPalette.Black
     },
     description: {

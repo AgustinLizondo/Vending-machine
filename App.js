@@ -23,17 +23,6 @@ export default function App() {
   );
 }
 
-{/* 
-<AmountCard amount={'1'} />
-<BasicButton content={'Buy'} />
-<PriceButton price={'5'} />
-<Tag value={'E12'} selected={true} />
-<TextTab content={'Text'} selected={true} />
-<Transaction type={'Coffee'} nOrder={'01'} code={'E41'} date={'23 march, 10:12 AM'} transaction={false} price={'1,00'} />
-<Vending type={'Mix'} nOrder={'01'} />
-<VendingSelection type={'Coffee'} nOrder={'01'} code={'E41'} price={'1,20'}/>
-<ActionsCard /> */}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

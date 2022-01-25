@@ -34,7 +34,10 @@ const styles = StyleSheet.create({
         borderColor: colorPalette.Gray,
         backgroundColor: colorPalette.Blue,
         marginHorizontal: 4,
-    }
+    },
+    content: {
+        // fontFamily: 'Circular Std'
+    } 
 })
 
 export default Tag
