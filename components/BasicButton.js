@@ -1,19 +1,24 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 import colorPalette from '../assets/Colors';
+import { LinearGradient } from 'expo-linear-gradient';
 
-
-const BasicButton = ({content}) => {
+const BasicButton = ({ content }) => {
     return (
         <TouchableOpacity style={styles.card}>
-            <Text style={styles.content}>{content}</Text>
+            <LinearGradient
+
+                style={styles.card}
+                colors={['#6B73FF', '#2B35FF']}
+            >
+                <Text style={styles.content}>{content}</Text>
+            </LinearGradient>
         </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: colorPalette.Blue,
         width: 157,
         height: 54,
         borderRadius: 100,

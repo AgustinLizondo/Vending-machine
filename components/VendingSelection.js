@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react'
 import { StyleSheet, Text, View, Image, TextInput, Dimensions } from 'react-native'
 import colorPalette from '../assets/Colors'
@@ -36,7 +37,10 @@ const VendingSelection = ({ type, nOrder, code, price }) => {
     }
 
     return (
-        <View style={styles.card}>
+        <LinearGradient
+            style={styles.card}
+            colors={['#6B73FF', '#2B35FF']}
+        >
             <Image
                 source={require('../assets/icons/chevron-bottom.png')}
                 style={{ width: 24, height: 24, position: 'absolute', top: 28, left: 20 }}
@@ -74,7 +78,7 @@ const VendingSelection = ({ type, nOrder, code, price }) => {
                 </View>
                 <Text style={styles.price}>{price} €</Text>
             </View>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -82,7 +86,6 @@ export default VendingSelection
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: colorPalette.Blue,
         top: 0,
         borderTopRightRadius: 24,
         borderTopLeftRadius: 24,

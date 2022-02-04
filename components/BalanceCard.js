@@ -1,10 +1,14 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors';
+import { LinearGradient } from 'expo-linear-gradient'
 
 const BalanceCard = ({ balance, onTap }) => {
     return (
-        <View style={styles.card}>
+        <LinearGradient
+            style={styles.card}
+            colors={['#6B73FF', '#2B35FF']}
+        >
             <View style={{
                 position: 'absolute',
                 top: 20,
@@ -17,7 +21,7 @@ const BalanceCard = ({ balance, onTap }) => {
             <TouchableOpacity style={styles.subCard} onPress={onTap}>
                 <Text style={styles.recharge}>Recharge</Text>
             </TouchableOpacity>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -26,7 +30,6 @@ const styles = StyleSheet.create({
         width: 395,
         height: 100,
         borderRadius: 8,
-        backgroundColor: colorPalette.Blue,
         flexDirection: 'row',
     },
     available: {

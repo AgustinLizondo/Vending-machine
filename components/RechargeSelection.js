@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import colorPalette from '../assets/Colors'
 import PriceButton from './PriceButton'
+import { LinearGradient } from 'expo-linear-gradient'
 
 const RechargeSelection = ({ onTap }) => {
 
     const [selectedValue, setSelectedValue] = useState(10);
 
     return (
-        <View style={styles.container}>
+        <LinearGradient
+            style={styles.container}
+            colors={['#6B73FF', '#2B35FF']}
+        >
             <TouchableOpacity
                 style={{ width: 128, height: 32, position: 'absolute', alignItems: 'center' }}
                 onPress={onTap}
@@ -30,7 +34,7 @@ const RechargeSelection = ({ onTap }) => {
                     <PriceButton price={20} selectedValue={selectedValue} onTap={() => setSelectedValue(20)} />
                 </View>
             </View>
-        </View>
+        </LinearGradient>
     )
 }
 
@@ -43,7 +47,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: 297,
-        backgroundColor: colorPalette.Blue,
         borderTopRightRadius: 24,
         borderTopLeftRadius: 24,
     },
